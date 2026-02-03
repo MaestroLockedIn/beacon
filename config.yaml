@@ -1,14 +1,14 @@
 endpoints :
-  - name: "Test Config 1"
-    url: "http://test1.com"
-    interval_seconds: 6
-    max_response_time_ms: 10
-    timeout_second: 10
-    expected_status_range: [200, 201]
-    latency: 5
+  # - name: "Test Config 1"
+  #   url: "http://test1.com"
+  #   interval_seconds: 6
+  #   max_response_time_ms: 10
+  #   timeout_second: 10
+  #   expected_status_range: [200, 201]
+  #   latency: 5
 
   - name: "Test Config 2"
-    url: "http://test2.com"
+    url: "https://jsonplaceholder.typicode.com/todos/1"
     interval_seconds: 6
     expected_status: 200
     max_response_time_ms: 10
