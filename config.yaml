@@ -7,12 +7,17 @@ endpoints :
   #   expected_status_range: [200, 201]
   #   latency: 5
 
-  - name: "Test Config 2"
+  - name: "First Config"
     url: "https://jsonplaceholder.typicode.com/todos/1"
-    interval_seconds: 6
-    expected_status: 200
+    interval_seconds: 2
     max_response_time_ms: 10
     timeout_second: 10
-    expected_status_range: [200, 201]
+    latency: 5
+
+  - name: "Second Config"
+    url: "https://jsonplaceholder.typicode.com/todos/1"
+    interval_seconds: 6
+    max_response_time_ms: 10
+    timeout_second: 10
     latency: 5
 

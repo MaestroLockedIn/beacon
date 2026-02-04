@@ -1,9 +1,7 @@
-use std::{collections::HashMap, error};
+use std::error;
 
-use axum::Json;
 use reqwest::Response;
 use serde::Deserialize;
-use serde_json::Value;
 
 use crate::config::EndpointConfig;
 
@@ -45,13 +43,9 @@ impl HttpPing {
 }
 
 fn request_match(resp: Response, rules: &HttpRule) -> Result<bool, &str> {
-    //TODO: if api response matches rule return true else return error
-
     if rules.is_successful && !resp.status().is_success() {
         return Err("Ping Request was not successful");
     }
-
-    // I need to come up with other rules for http ping
-
+    //TODO: Once the rules for the config is set validate the rules here
     Ok(true)
 }

@@ -10,8 +10,6 @@ pub struct EndpointConfig {
     pub name: String,
     pub url: String,
     pub interval_seconds: u64,
-    pub expected_status_range: [u64; 2],
-    pub latency: u64,
-    pub max_response_time_ms: u64,
-    pub timeout_second: u64,
+    //TODO: Figure out the rules that needs to be applied  here
+    // I need to come up with other rules for http ping
 }
